@@ -49,11 +49,11 @@ def getVersesFromDB(ref):
 	db = sqlite3.connect('/home/toben/Code/Little-News-Processor/bible.db')
 	c = db.cursor()
 	
-	query = 'SELECT * FROM verse WHERE book LIKE "'+ref['book']+'" AND chapter='+ref['chapter']
+	query = 'SELECT * FROM verse WHERE book LIKE "'+ref['book']+'" AND chapter='+ref['chapter']#+" AND verse<5"
 	#query = 'SELECT * FROM verse WHERE book LIKE "Proverbs" AND chapter=6'
 	
 	c.execute(query)
-	print query
+#	print(query)
 	
 	ref = c.fetchall()
 	return ref
@@ -63,5 +63,3 @@ def fetch():
 	for r in getTodaysReferences():
 		verses.append(getVersesFromDB(r))
 	return verses
-
-print len(verses)

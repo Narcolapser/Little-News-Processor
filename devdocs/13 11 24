@@ -1,0 +1,20 @@
+I've now to the point that honestly has me most excited. I've got it all the pieces in place. I can read in from the bible db, process it into a formated string, and pull news down from TL;DR news and have it processed into neat head lines, and then have this all out put to a file. Next comes the fun part, putting the pieces together.
+
+Now, thus far I've just manually patched all of them through to each other, but now I want to make something external to the code to get this to actually work. two ideas on how to do this.
+
+First:
+	Write scripts in straight python that tend to all the patching.
+Second:
+	Write a parser that reads in configuration files that describe the news network, runs it, and out puts it.
+
+I had leaned towards the second one because I thought that If I go to a GUI on this program later I would need something like that to make it work right. But I don't think so. I think the all around best approach to this is going to be straight python.
+
+
+I've added a new name to my convetion, "Network".
+
+xIn : a script designed to fetch data from an outside source. Given no arguments.
+xProc : a script designed to process internal data. Give the data as only argument.
+xOut : a script designed to take data and put it some where external. Given data and location as arguments.
+xNetwork : a script that describes an arrangement of the scripts above. 
+
+
