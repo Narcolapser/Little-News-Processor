@@ -17,4 +17,4 @@ xProc : a script designed to process internal data. Give the data as only argume
 xOut : a script designed to take data and put it some where external. Given data and location as arguments.
 xNetwork : a script that describes an arrangement of the scripts above. 
 
-
+AAAAND i got weather working now too. Woohoo! My next endevour will be to see if I can get PDF out put working. 

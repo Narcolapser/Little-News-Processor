@@ -22,16 +22,27 @@ So, The bible is huge. I want to set up a reading schedule for myself and have t
 What's more, say I keep close tabs on my bank acounts. Every day I log in and check the transactions, download the csv, add it to my spread sheet and plug in transaction purposes and types etc. LNP will read in that spread sheet and make informatics. say like a pie chart of how much I have spent this month and how much of my income I have left. Or a table of my expendatures and how they have varied from last month.
 
 This sounds complex. How are you going to pull it off?
-Three APIs. Yea. Three. This is why. LNP exists to provide the inter-API communication and act as the frame work for the 3 to communicate, but LNP itself has absolutely no knowledge of what's beyond the input or the out put, and it does not know any of the data it feeds into the processing or out of it. It only knows a universal description language (XML) that will be used to wrap the information and unify it. This allows input, output, and processing pluggins to be written easily as they only have to care about getting data down and shaping it, taking shaped and processed data and formatting it, or taking data and making information. 
+xIn : a script designed to fetch data from an outside source. Given no arguments.
+xProc : a script designed to process internal data. Give the data as only argument.
+xOut : a script designed to take data and put it some where external. Given data and location as arguments.
+xNetwork : a script that describes an arrangement of the scripts above. 
+In these cases replace "x" with the desired name.
 
-The input API is very straight forward. You write a python script which has one required function "fetch" this function has 1 argument. That argument may be a tuple, but LNP cares not, however LNP will send one and only one and always one argument. LNP expects in return a data set, whose format will be described in the XML description file.
+Road map:
+Version 0.1:
+	Read in bible verses
+	read in news from toolong-didntread.com.
 
-The output API is very similar a very straight forward API. With this there are two arguments sent to the "put" function. This is because I assume you are going to want the data to out put and the location to put it. So if you write a PDF or out put to WordPress, you gotta the information in those two arguements.
+Version 0.2:
+	process both bible and tldr-n inputs
+	output to txt
 
-The processing API is again, very simple. Here, 1 input, 1 output, function named "consume" to avoid naming conflicts with the "process" library. 
+Version 0.3:
+	fetch and consume weather forcasts.
+	output to pdf
 
-With the input API one might take the location of an RSS feed as the argument, the plugin would then fetch the information from the feed and return it. perhaps if you had a tuple it would take the location and a date so that you could prevent downloading the entire feed repeatebly.
-
-The output API might take a set of text, and a couple of images and arange them and out put a pdf that is automatically pushed to my kindle. so in the morning when I wake, there's my personal news pdf ready and waiting.
-
-The processing API is meant to simplify both the in and output a little by taking some stress from them. for example the input api might give me all my account information, and the out put api will do a great job and writting to a pdf. But it doesn't make sense for the "bank account" pluggin to make pie charts. nor does it make sense for the "pdf writter" pluggin to. so the processing api exists simply to fill the gaps and keep the programming modular as possible. 
+Version 0.4:
+	fetch and consume personal finance information.
+	
+Version 0.5:
+	Begin simple GUI
