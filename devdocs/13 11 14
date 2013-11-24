@@ -1,0 +1,3 @@
+So in my current planning, with my 3 development streams (bible, finances, and tldr-n) I'm going to do a simple text out put. So it reads in bible verses, processes them into two pages, addes in verse markers and chapter heads. This is out put as a long string. The tldr-n reads in all the articles, and then gets processed into a article head line, and a body. Lastly, finances are read in a long list of transactions and, processes them into a table of accounts and then sends that as a single string.
+
+NOW! I know what I want, so I can now continue on. woohoo!
