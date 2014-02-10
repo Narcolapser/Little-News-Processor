@@ -7,8 +7,10 @@ import tldrnewsProc
 import weatherProc
 
 import textOut
+import htmlOut
+import pdfOut
 
-kindle = "/media/toben/Kindle/documents/"
+kindle = ""
 
 def run():
 	data = []
@@ -20,6 +22,8 @@ def run():
 	data.append(weatherProc.consume(weatherIn.fetch()))
 	print("done. outputing")
 	textOut.put(data,kindle+"dailyNews.txt")
+	htmlOut.put(data,kindle+"dailyNews.html")
+	pdfOut.put(data,kindle+"dailyNews")
 	print("Network complete")
 
 if __name__ == "__main__":
