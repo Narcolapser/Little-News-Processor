@@ -4,4 +4,7 @@ commit:
 	git commit
 
 clean:
-	rm *~ */*~
+	rm *~ 
+	rm */*~ 
+	rm *.pyc
+	rm */*.pyc

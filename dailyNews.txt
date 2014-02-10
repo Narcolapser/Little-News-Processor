@@ -1,6 +1,114 @@
+l 
 
+
+ln
+
+
+lb
+
+
+ln
+
+
+l 
+
+
+le
+
+
+ln
+
+
+lh
+
+
+ea
+
+
+e 
+
+
+er
+
+
+eA
+
+
+ep
+
+
+ef
+
+
+e5
+
+
+eh
+
+
+he
+
+
+ht
+
+
+ho
+
+
+h 
+
+
+hy
+
+
+he
+
+
+h 
+
+
+h 
+
+
+io
+
+
+ig
+
+
+i 
+
+
+ii
+
+
+ih
+
+
+i 
+
+
+iy
+
+
+iu
 
 --------------====================--------------
+
+world-news : UK town will text obese residents to encourage weight loss
+	The city council of Stoke-on-Trent is sending daily motivational text messages to overweight people, in a voluntary scheme to try and curb obesity. It covers 500 people at a cost of \xc2\xa310,000 (about $16,000), with messages including &#8220;Eat slightly smaller portions&#8221; and &#8220;Use the stairs more&#8221;.
+
+world-news : Kenneth Bae's move to North Korea labor camp is 'devastating'
+	Kenneth Bae, the American citizen imprisoned in North Korea, has been moved from the North Korean hospital he was in to a labor camp, his sister said. His family is \xe2\x80\x9cdeeply concerned\xe2\x80\x9d.
+
+world-news : US store chain to halt tobacco sales
+	US based store chain, CVS, has announced they\xe2\x80\x99ll stop selling tobacco on their stores. CEO Larry Merlo said that \xe2\x80\x9cremoving tobacco products from our stores is the right thing to do\xe2\x80\x9d.
+
+world-news : Spanish princess testifies in corruption case
+	Princess Cristina of Spain testified in court yesterday, accused of a financial corruption case involving royal family members. She has maintained her innocence throughout the whole process.
+
+world-news : Russians say authorities rounding up, poisoning stray dogs before Olympics
+	The Olympic city has a stray dogs problem. Thousands of stray dogs wander the streets and suburbs of Sochi, and Russian animal rights activists accused authorities of a campaign to exterminate these dogs before the start of the 2014 Winter Olympics.
 
 world-news : Passenger makes bomb threat to force plane to land in Sochi
 	A Pegasus Airlines plane landed at Istanbul today after a passenger said that there was a bomb on board and wanted the plane to land in Sochi, Russia, where the Winter Olympics are being celebrated now.
@@ -11,20 +119,11 @@ world-news : Spanish authorities seize a ton of cocaine in floating backpacks
 world-news : Mainland Chinese line up for Australia's 'millionaire visa'
 	Rich Chinese nationals have been queuing up for the opportunity to live in Australia under the millionaire visa program, which requires a clean criminal record and $A5 million ($US4.37 million) to invest .
 
-world-news : North and South Korea agree to hold family reunions this month
-	North Korea and South Korea have agreed to hold reunions between February 20 and 25, of families separated in the Korean War. If they go ahead, they would be the first since 2010.
+science : Stem cell 'major discovery' claimed
+	Japanese stem cell researchers are heralding a &#8220;major scientific discovery&#8221;, with the potential to start a new age of personalized medicine. Stem cells can transform into any tissue and are already being trialled for healing the eye, heart and brain.
 
-world-news : Castaway recounts how he survived 13 months adrift in Pacific
-	Jose Salvador Alvarenga, a castaway, has been living off turtles and rainwater while adrift. He says he considered killing himself when he ran out of food and water.
-
-world-news : Ohio authorities investigate triple murder-suicide
-	Four relatives were found dead in what is believed to be a triple murder or suicide in northwestern Ohio.A family member discovered the four relatives, Robert Garza Sr., his wife, daughter and granddaughter.
-
-world-news : North Korea threatens to pull out of family reunions
-	North Korea is threatening to back off the family reunions they agreed with South Korea if the later doesn&#8217;t stops the military drills that&#8217;ll be performed at the end of this month with the United States.
-
-world-news : Explosion at Libyan school injures six children
-	Six students were wounded when a number of unknown assailants tossed a hand grenade into a school in the eastern Libyan city of Benghazi. The hospital says that the attack happened during school break time.
+science : Lawrence Livermore Lab wins $45 million to create the most powerful laser ever built
+	The United States Lawrence Livermore National Laboratory joined the cutting edge of laser research, receiving $45 million dollars to build the most powerful laser ever built for an EU project in Prague, Czech Republic.
 
 science : Boston Company Developing Synthetic Organs
 	 Harvard Apparatus Regenerative Technology, a regenerative-medicine company, is developing synthetic tracheas which it plans to produce on a larger scale soon. The company is testing its technique in Russia, aiming to continue tests in the European Union later this year, and eventually in the United States.
@@ -44,11 +143,17 @@ science : A Fifteen-Year-Old Has Invented an Incredible New Kind of Flashlight
 science : Eye chip sends signals to blind rats' brains
 	A chip implanted in a rat\xe2\x80\x99s eye sends it brain signals, so the blind rat can see. Rats with faulty vision that received the prosthetic implants responded to light with activity in their brains\xe2\x80\x99 visual cortexes.
 
-science : Justice rule human genes cannot be patented
-	The US Supreme Court ruled on Thursday that human genes cannot be patented, but synthetic genes can. Several thousand patents have been invalidated after this ruling.
+tech : Facebook answers dad's emotional plea
+	Facebook helped a grieving dad who made an online plea to see a \xe2\x80\x9cLook Back\xe2\x80\x9d video about his son, Jesse Berlin, who passed away in 2012. Facebook started doing the videos as part of their 10 year anniversary.
 
-science : New Human Body Part Discovered
-	Harminder Dua has found a new body part that is just 15 microns thick. It is a layer of the eye which has now been called Dua\xe2\x80\x99s layer.
+tech : Twitter Releases New Transparency Report, Says It&rsquo;s &lsquo;Considering Legal Options To Defend First Amendment Rights&rsquo;
+	Twitter has followed Facebook, LinkedIn, Google, Yahoo and Microsoft, who last week revealed data about NSA information requests, and done the same. The company said that current rules do not allow it to be as transparent as it would like, and that it is considering taking its fight to the courts to defend its First Amendment rights.
+
+tech : Samsung said demanding iPhone logos covered at Olympics opening ceremony
+	According to the Swiss Olympic team, Olympics sponsor Samsung is dropping Galaxy Note 3 smartphones in athletes&#8217; goodie-bags, with the catch of a supposed ban on any other device branding during the televised opening ceremony - for example the Apple logo on an iPhone must be physically covered so that it is not visible.
+
+tech : DARPA publishes all its open source code in one place
+	The United States Defense Advanced Research Projects Agency (DARPA) sponsors a lot of technology through grants to universities and private labs, which generates a lot of source code, although until now it hasn\xe2\x80\x99t been that easy to access to it. Now it will all be in one place.
 
 tech : Sony to sell PC unit and cut jobs
 	Sony is to sell its PC unit, cut 5,000 jobs and split its TV division into a separate subsidiary, as part of a plan to reverse heavy losses. Sony forecast a net loss of 110bn yen ($1.08bn) for the financial year to 31 March, revising its earlier projection of a 30bn yen profit.
@@ -62,17 +167,8 @@ tech : FCC will double spending in order bring 100Mbps to students
 tech : Tesla completes its cross-country world record attempt
 	Two Tesla Model S electric vehicles have crossed the US from Los Angeles to New York City in 76 hours. The journey was an attempt to break a Guinness Record for cross-country energy efficiency, but it&#8217;s not yet clear if the attempt was successful.
 
-tech : Facebook turns ten today
-	Facebook launched 10 years ago today in a dorm room at Harvard University, as a way for students to connect with friends. Today, the social media giant has more than 1.2 billion active users worldwide, and is the biggest social network.
-
-tech : Microsoft May Be Getting Ready for a Huge Windows 8.1 Flip-Flop
-	A pair of reports suggest the Windows 8.1 update for 2014 will allow the OS to boot straight into the desktop and make it the default environment, after much criticism of Windows 8&#8217;s birfurcated approach to computing. Windows 8.1 did nothing to slow the PC market&#8217;s decline, falling 6.4% in the fall quarter, whilst Apple&#8217;s Mac sales increased 19% year-on-year.
-
-tech : US Treasury confirms Bitcoin miners and investors won't be regulated
-	Bitcoin miners and investors will not be regulated by the US Treasury. The clarification came in a pair of rulings yesterday from the Financial Crimes Enforcement Network. Now people who mine virtual currencies and businesses that buy and sell virtual currencies purely as an investment will not be considered money transmitters.
-
-tech : Facebook presents Paper
-	Facebook announced Paper, a new app that takes the standard Facebook News Feed and recreates it as a horizontally scrolling set of screens. It also provides a new way to post to Facebook (and Paper) with an elegant WYSIWYG editor.
+gaming : Game hit 'Flappy Bird' racks up $50K per day in ad revenue
+	According to the Vietnamese developer of the difficult mobile game, Dong Nguyen, Flappy Bird is generating on average $50,000 a day from in-app ads. It has been sitting atop the App Store and Google Play Store charts for nearly a month.
 
 gaming : World of Tanks: Xbox 360 Edition launching Feb. 12
 	Wargaming.net announced they will launch World of Tanks for Xbox 360 worldwide on February 12. The game will be downloadable only, and free to play with an Xbox Live Gold account.
@@ -95,37 +191,34 @@ gaming : Sony to reveal the 'slimmest' launch in its history
 gaming : 'Super-rare' Nintendo game hits eBay
 	A super rare Nintendo Entertainment System (NES) hit eBay earlier this week. Only 116 copies of Nintendo World Championships were ever made, as part of a special event in 1990. The first bid came in at $4,999, but it finally sold to $99,902.00.
 
-gaming : Minecraft for PS3 sells more than 1M units
-	Minecraft for Sony&#8217;s PlayStation 3 has already sold more than 1 million units, after being announced last December. The developer, Mojang, has announced PS Vita and PlayStation 4 versions of the popular sandbox game.
-
 
 
 
 --------------====================--------------
 
-Friday: mostlycloudy
-	Overcast with rain. High of 9C. Windy. Winds from the West at 20 to 30 km/h.
-
-Friday Night: rain
-	Overcast with a chance of rain, then rain after midnight. Fog overnight. Low of 5C. Windy. Winds from the South at 25 to 40 km/h. Chance of rain 80% with rainfall amounts near 5.1 mm possible.
-
-Saturday: chancerain
-	Mostly cloudy with a chance of rain. High of 9C. Winds from the South at 35 to 50 km/h. Chance of rain 40%.
-
-Saturday Night: rain
-	Overcast with a chance of rain, then rain after midnight. Low of 5C. Winds from the SSW at 35 to 55 km/h. Chance of rain 60%.
-
-Sunday: mostlycloudy
-	Mostly cloudy. High of 8C. Winds from the WSW at 35 to 40 km/h.
-
-Sunday Night: partlycloudy
-	Overcast in the evening, then partly cloudy. Low of 1C. Breezy. Winds from the SSW at 15 to 25 km/h.
-
-Monday: partlycloudy
-	Overcast. High of 8C. Breezy. Winds from the SW at 10 to 30 km/h shifting to the NW in the afternoon.
+Monday: chancerain
+	Partly cloudy with a chance of rain in the afternoon. High of 9C. Winds from the SSW at 10 to 15 km/h. Chance of rain 30%.
 
 Monday Night: mostlycloudy
-	Clear in the evening, then overcast. Low of 0C with a windchill as low as -4C. Breezy. Winds from the SW at 15 to 30 km/h.
+	Partly cloudy in the evening, then overcast. Low of 1C. Breezy. Winds from the WNW at 10 to 25 km/h shifting to the SSW after midnight.
+
+Tuesday: rain
+	Overcast with rain in the morning, then clear with a chance of rain. High of 7C. Windy. Winds from the SW at 20 to 40 km/h. Chance of rain 70%.
+
+Tuesday Night: mostlycloudy
+	Overcast with a chance of rain. Low of 1C. Breezy. Winds from the SW at 20 to 25 km/h.
+
+Wednesday: chancerain
+	Overcast with a chance of rain in the afternoon. High of 9C. Windy. Winds from the South at 25 to 45 km/h. Chance of rain 60% with rainfall amounts near 5.3 mm possible.
+
+Wednesday Night: chancerain
+	Partly cloudy with a chance of rain. Low of 3C. Winds from the SW at 50 to 55 km/h. Chance of rain 40%.
+
+Thursday: mostlycloudy
+	Partly cloudy in the morning, then overcast. High of 8C. Windy. Winds from the SW at 25 to 30 km/h.
+
+Thursday Night: partlycloudy
+	Mostly cloudy in the evening, then overcast. Low of 2C. Breezy. Winds from the SW at 15 to 20 km/h.
 
 
 

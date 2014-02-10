@@ -1,3 +1,38 @@
 I've added another dependency "Mechanize" which also forces me to run in python 2, maybe. Unless I can call a python 2 script from python 3. I can, it is kind of silly to do it that way, but I want to keep this as much as possible in python 3. I'm working towards always doing projects there, but it takes time. The libraries are slowly getting there, but mechanize is not there yet.
 
 Also. I'm adding password support. This is necessary for sites such as caleb that use a password to get in. So I'm adding the *.passwd to the .git-ignore so that password files can be kept seceret and won't get uploaded to git hub. I'll eventually learn how to hash these passwords, but for now I'll just leave it be as raw text. dangerous, yes, I know. But no one has found this project yet and the password file will never get uploaded to the repo.
+
+I stand corrected on the matter of mechanize. I can do basic authentication using urllib:
+http://www.voidspace.org.uk/python/articles/authentication.shtml
+
+One of the hardest things about this project is trying to figure out where to generalize and where to be specific. My gut told me that I needed 3 layers and several times I questioned it. But I'm starting to get why it has to be so. 
+
+Inputs are highly specific. They take unformed data and translate them into python objects. This is all they do. They get the data in as a python object. When it has been formed as simple objects that require no external resources to work with and as a general rule of thumb, can be pickled, the processor layer takes over. 
+
+Processors deal with python object inputs and have python object out puts. Like inputs, they are data specific. but they are also data specific in both directions. If i'm reading in bible verses from a local database and out putting to text and to html, i need two seperate processors. Both the processors understand the data, it's nuances, and how it is shapped. But each processor does not know anything about the other's intended out put. Similarly, the weather processors know nothing about the bible (clearly they need to be ctl-s'ed). But bibleHTML and weatherHTML both understand how to process their own inputs into something for the HTML output to deal with. 
+
+Outputs only know how to take well formed data and put it into an external format. They have very specific needs for their input so that they can focus on the task at hand of dealing with the output format. If you have more than one output that goes to the same type, say two different HTML outputs, they will more likely than not need different inputs.
+
+So in the end. Inputs we want to keep simply focused on the getting data. Outputs we want to have as focused as possible on the end result. So everything in the middle should be taking the input and forming it into the desired form for the output to consume it. 
+
+Alright. I have made great progress on the achievement of HTML output. I've got the bible output basically done. I just want to do some last polishing on it, and then I'll move on to other html outs. But before I go to bed. I want to write another input. gs.stats.
+
+gs.statcounter is a web site I love to watch as it tracks various features of web traffic. So to save me the time of predicting the fall of I.E. and the rise of linux and all that. I want it to be incorporated in my daily news feed. This is the anatomy of their csv download link: 
+
+http://gs.statcounter.com/chart.php?device=Desktop%2C%20Tablet%20%26%20Console&device_hidden=desktop%2Btablet%2Bconsole&statType_hidden=browser&region_hidden=ww&granularity=monthly&statType=Browser&region=Worldwide&fromInt=201301&toInt=201401&fromMonthYear=2013-01&toMonthYear=2014-01&multi-device=true&csv=1
+So the peices are: 
+	device=Desktop%2C%20Tablet%20%26%20Console
+	device_hidden=desktop%2Btablet%2Bconsole
+	statType_hidden=browser
+	region_hidden=ww
+	granularity=monthly
+	statType=Browser
+	region=Worldwide
+	fromInt=201301
+	toInt=201401
+	fromMonthYear=2013-01
+	toMonthYear=2014-01
+	multi-device=true
+	csv=1
+
+I'll look at this more tomorrow. But it looks like it shouldn't be to hard of a feat to manage.
