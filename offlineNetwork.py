@@ -3,7 +3,7 @@ from offlineData import data as odata
 print(len(odata))
 
 import bibleProcHTML
-import tldrnewsProc
+import tldrnewsProcHTML
 import weatherProc
 
 import textOut
@@ -16,8 +16,8 @@ def run():
 	data = []
 	print("fectching bible")
 	data.append(bibleProcHTML.consume(odata[0]))
-#	print("done. Fetching news")
-#	data.append(tldrnewsProc.consume(odata[1]))
+	print("done. Fetching news")
+	data.append(tldrnewsProcHTML.consume(odata[1]))
 #	print("done. Fetching weather")
 #	data.append(weatherProc.consume(odata[2]))
 #	print("done. outputing")
