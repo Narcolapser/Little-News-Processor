@@ -107,19 +107,37 @@ def find_total_debit(pr):
 	deb_end = pr.find(' ',deb_st)
 	return float(pr[deb_st:deb_end])
 
-'''==================================================================================================================================== 
-Grand Total:                               814.53               525.06                          4,619.63 CR            4,330.16 CR 
-Net Balance:                               289.47                           '''
-
 def find_net_balance(pr):
-	net_st = pr.find('Net Balance:  ') + len('Net Balance:  ')
+	net_st = pr.find('\nNet Balance:  ') + len('\nNet Balance:  ')
 	while pr[net_st] == ' ':
 		net_st += 1
 	net_end = pr.find(' ',net_st)
 	return float(pr[net_st:net_end])
 
 def find_starting_balance(pr):
-	pass
+	cred_st = pr.find('Grand Total') + len('Grand Total:')
+	##get to where the debit value is.
+	while pr[cred_st] == ' ':
+		cred_st += 1
+	##get past debit.
+	while pr[cred_st] != ' ':
+		cred_st += 1
+	#and now find credit.
+	while pr[cred_st] == ' ':
+		cred_st += 1
+	#now get past credit
+	while pr[cred_st] != ' ':
+		cred_st += 1
+	#lastly get to stating balance
+	while pr[cred_st] == ' ':
+		cred_st += 1
+	cred_end = pr.find(' ',cred_st)
+	return float(pr[cred_st:cred_end].replace(',',''))
 
-def find_ending_balance(self):
-	pass
+def find_ending_balance(pr):
+	bal_end = pr.find(' CR \r\n',pr.find('Grand Total:'))
+	bal_st = bal_end - 1
+	while pr[bal_st] != ' ':
+		bal_st -= 1
+	bal_st += 1
+	return float(pr[bal_st:bal_end].replace(',',''))
