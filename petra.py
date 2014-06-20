@@ -15,7 +15,7 @@ class Report(object):
 	net_balance = None
 	starting_balance = None
 	ending_balance = None
-	centres = []
+	centres = None
 	
 	def __init__(self,path_to_report):
 		with open(path_to_report) as petra_report:
@@ -35,35 +35,69 @@ class Report(object):
 		centres_s = pr[centre_st:].split('3832ARCT-')
 		centres_s.pop(0)
 		#print(len(centres_s),centre_st)
+		self.centres = []
 		for centre in centres_s:
 			self.centres.append(Centre(centre))
-		for i,centre in enumerate(self.centres):
-			print(i,centre.ID)
 
 class Centre(object):
 	'''this class wraps the sub cost centres of the petra reports so that you can see the charges
 	in your petra report by category'''
 	ID = None
-	category = ''
-	items = []
-	centre_total = None
+	category = None
+	items = None
+	centre_total_debit = None
+	centre_total_credit = None
 	
 	def __init__(self,centre):
 		#print(centre[:4])
 		self.ID = int(centre[:4].replace(' ',''))
+		cat_st = 5
+		while centre[cat_st] == ' ':
+			cat_st += 1
+		self.category = centre[cat_st:centre.find(', ',cat_st)]
+		lines = centre.split('\n')
+		self.items = []
+		sub_line = None
+		for line in lines[1:]:
+			if 'Sub Total:' in line:
+				sub_line = line
+				break
+			self.items.append(Item(line))
+		sub_st = sub_line.find('Sub Total:') + len('Sub Total: ')
+		while sub_line[sub_st] == ' ':
+			sub_st += 1
+		sub_s = sub_line[sub_st:sub_line.find(' ',sub_st)].replace(',','')
+		self.centre_total_debit = float(sub_s)
 		
+		sub_st += len(sub_s) + 1
+		while sub_line[sub_st] == ' ':
+			sub_st += 1
+		sub_s = sub_line[sub_st:sub_line.find(' ',sub_st)].replace(',','')
+		self.centre_total_credit = float(sub_s)
+
+	def __str__(self):
+		return 'ID: {0}\t Category: {1}\t tDebit: {2}\t tCredit: {3}\n'.format(self.ID,self.category,self.centre_total_debit,self.centre_total_credit)
+
+
+class Item (object):
+
+	def __init__(self, line):
+		day = int(line[2:4])
+		mon = months[line[5:8]]
+		year = int(line[9:13])
+		self.date = datetime.date(year,mon,day)
+		code_st = 15
+		self.code = line[code_st:line.find(' ',code_st)]
+		v_st = line.find(' ',code_st)
+		while v_st == ' ':
+			v_st += 1
+		value_s = line[v_st:line.find(' ',v_st)]
+		self.value = value_s
+
 
 '''
-5004         Internal Recharges, Archer, Toby 
   31-Mar-2014  minrec3                      78.76                               Ministry Recharge - March - Archer 
   31-Mar-2014  minrec3                       5.25                               Europe AG - March  - Archer 
-                   Sub Total:               84.01                 0.00                          1,787.49 DR            1,871.50 DR 
-                 Net Balance:               84.01                           
- 
-               Account Total:               84.01                 0.00                          1,787.49 DR            1,871.50 DR 
-                 Net Balance:               84.01                           
------------------------------------------------------------------------------------------------------------------------------------- 
- 
 '''
 
 def find_cost_centre(pr):

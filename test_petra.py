@@ -47,9 +47,28 @@ class TestReport (unittest.TestCase):
 class TestCentre(unittest.TestCase):
 	def setUp(self):
 		self.report = Report('/home/toben/Downloads/r0055639.txt')
+		self.minrec = None
+		for c in self.report.centres:
+			if c.ID == 5004:
+				self.minrec = c
+				break
 	
 	def test_centre_ID(self):
-		self.report
+		self.assertEqual(self.minrec.ID,5004)
+	
+	def test_category(self):
+		self.assertEqual(self.minrec.category,'Internal Recharges')
+	
+	def test_items_count(self):
+		self.assertEqual(len(self.minrec.items),2)
+	
+	def test_centre_total_debit(self):
+		self.assertEqual(self.minrec.centre_total_credit,0.0)
+
+	def test_centre_total_credit(self):
+		self.assertEqual(self.minrec.centre_total_debit,84.01)
+
+
 
 if __name__ == '__main__':
 	unittest.main()
