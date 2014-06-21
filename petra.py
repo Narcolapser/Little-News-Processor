@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 #-*- coding:utf-8 -*-
 
-
 '''
 Petra Report python wrapper library.
 
@@ -40,8 +39,11 @@ I also left all the functions for finding the various parts of the report as sta
 only require you to pass a string of the petra report to it to get the value out. so you can also
 call these methods individually if you just need one part and not the whole.
 
-I want to add to this a little more so it can operate as a stand alone script that will translate
-petra reports in to json.
+This can also be used as a script in a pipeline:
+petra.py path_to_report | grep 'ending_balance'
+
+or can translate petra reports into json files:
+petra.py path_to_report path_to_output_json
 
 '''
 
@@ -246,9 +248,24 @@ def find_ending_balance(pr):
 	bal_st += 1
 	return float(pr[bal_st:bal_end].replace(',',''))
 
+usage = '''Usage of petra.py: (are you using python3?)
+Pass zero arguments to read this usage message:
+petra.py
+
+Pass one argument to output to screen or pipe:
+petra.py path_to_report
+
+Pass two arguments to output to a file:
+petra.py path_to_report path_to_output_json
+
+Pass three arguments to feel like an over-achiever:
+petra.py path_to_report path_to_output_json brownie_points
+'''
+
 if __name__ == '__main__':
 	if len(sys.argv) < 2:
-		'YOU BROKE IT! Actually you just didn\'t send me a report to process. try again.'
+		print(usage)
+		sys.exit()
 	rep = Report(sys.argv[1])
 	jout = {}
 	jout['cost_centre'] = rep.cost_centre
