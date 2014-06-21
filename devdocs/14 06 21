@@ -1,0 +1,51 @@
+Wow. I've not written anything in the devlog here since february. Anyway. I just finished making a python library that converts petra reports into python objects aswell as json. Now if I can just get it to connect to caleb I can have my support be just another one of the things in my daily personalized news feed. that's pretty nifty. 
+
+I'm starting to see this project develop a little bit of an unwieldy nature. There are a lot of files on the root of this project... But I'm not sure how I could change that. If I go for a folder for each API then I've not necesasarily simplified it. Though it is the only organizaton method that makes sense. I was thinking about sorting it by thing it did, like all the bible pluggin here, all the petra pluggin there, but that completely defies the idea of the project.
+
+So playing with that idea in my head, it actually sounds kinda like a good plan, putting each api in its own group, but here's the thing I can't get past, how do I load a python module in a different folder?
+
+appearently yes:
+
+from inputAPIs.bibleIn import *
+
+This would though lead to a problem, multiple "fetch" commands. hrum.
+
+ok. here's what I found:
+
+>>> from Little-New-Processor.petra Import Report
+
+failed. and so did anything with a hyphen in it. So I tried again making test.py in the devdocs folder.
+
+>>> from devdocs.test import Test
+>>> dir()
+['other stuff','Test']
+
+>>> import decdovs.test
+>>> dir()
+['other stuff','devdocs']
+>>> dir('devdocs')
+['test']
+
+>>> from devdocs.test import *
+>>> dir()
+['other stuff','Test']
+
+>>> from devdocs import test
+>>> dir()
+['other stuff','test']
+>>> dir('test')
+['Test']
+
+HAHA! that last one is briliant! So I'll be able to do something like:
+from inputs import bibleIn.py
+and then I can address everything in bibleIn.py as bibleIn.*! woohoo! sorting works. SORTING NOW!
+
+
+	dailyNews.html  firstNetwork.py      offlineData.py     sample.txt
+	dailyNews.pdf   inputs               offlineNetwork.py  secondNetwork.py
+	dailyNews.txt   kindleNetwork.py     outputs            setuptools-2.2.tar.gz
+	devdocs         LICENSE              processors         test_petra.py
+	dn.pdf          makefile             README
+	fetches         offlineDataMaker.py  README.md
+
+What's setup tools doing here? huh. well. gone now!
