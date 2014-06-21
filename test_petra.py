@@ -68,6 +68,32 @@ class TestCentre(unittest.TestCase):
 	def test_centre_total_credit(self):
 		self.assertEqual(self.minrec.centre_total_debit,84.01)
 
+class TestItem(unittest.TestCase):
+	def setUp(self):
+		self.report = Report('/home/toben/Downloads/r0055639.txt')
+		self.minrec = None
+		self.ich = None
+		for c in self.report.centres:
+			if c.ID == 5004:
+				self.minrec = c
+			if c.ID == 1100:
+				self.ich = c
+
+	def test_item_date(self):
+		d = datetime.date(2014,3,31)
+		self.assertEqual(d,self.minrec.items[0].date)
+		self.assertEqual(d,self.minrec.items[1].date)
+		self.assertEqual(d,self.ich.items[0].date)
+
+	def test_item_code(self):
+		self.assertEqual('minrec3',self.minrec.items[0].code)
+		self.assertEqual('minrec3',self.minrec.items[1].code)
+		self.assertEqual('ich3',self.ich.items[0].code)
+
+	def test_item_value(self):
+		self.assertEqual(-78.76,self.minrec.items[0].value)
+		self.assertEqual(-5.25,self.minrec.items[1].value)
+		self.assertEqual(525.06,self.ich.items[0].value)
 
 
 if __name__ == '__main__':

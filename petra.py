@@ -1,5 +1,49 @@
-import datetime
+'''
+Petra Report python wrapper library.
 
+The purpose of this library is to elevate petra reports into first class python objects. The 
+library is made up of 3 classes: Report, Centre, and Item. Report is the parent class. It houses
+all of the information unique to any given report. the centre, the currency, etc etc. Centre is
+the individual sub cost centres in the report: telephone, gas, electric, etc. And lastly Item is
+the actual values transfered around. So the organization looks something like:
+
+Report:
+	cost_centre = ''
+	period_start = None
+	period_finish = None
+	currency = 'GBP'
+	report_requester = ''
+	report_generated_date = None
+	total_credit = None
+	total_debit = None
+	net_balance = None
+	starting_balance = None
+	ending_balance = None
+	centres = list:
+		ID = None
+		category = None
+		centre_total_debit = None
+		centre_total_credit = None
+		items = list:
+			date
+			code
+			value
+
+so to access the value of a certain item you'd go:
+report.centres[2].items[0].value
+
+I also left all the functions for finding the various parts of the report as static methods that
+only require you to pass a string of the petra report to it to get the value out. so you can also
+call these methods individually if you just need one part and not the whole.
+
+I want to add to this a little more so it can operate as a stand alone script that will translate
+petra reports in to json.
+
+'''
+
+import datetime
+import sys
+import json
 
 class Report(object):
 	'''this class has the purpose of elevating a petra report into a python object that is easily 
@@ -17,9 +61,10 @@ class Report(object):
 	ending_balance = None
 	centres = None
 	
-	def __init__(self,path_to_report):
-		with open(path_to_report) as petra_report:
-			pr = petra_report.read()
+	def __init__(self,path_to_report=None,pr=None):
+		if path_to_report:
+			with open(path_to_report) as petra_report:
+				pr = petra_report.read()
 		self.cost_centre = find_cost_centre(pr)
 		self.period_start = find_period_start(pr)
 		self.period_finish = find_period_finish(pr)
@@ -44,9 +89,9 @@ class Centre(object):
 	in your petra report by category'''
 	ID = None
 	category = None
-	items = None
 	centre_total_debit = None
 	centre_total_credit = None
+	items = None
 	
 	def __init__(self,centre):
 		#print(centre[:4])
@@ -80,6 +125,10 @@ class Centre(object):
 
 
 class Item (object):
+	
+	date = None
+	code = None
+	value = None
 
 	def __init__(self, line):
 		day = int(line[2:4])
@@ -88,17 +137,18 @@ class Item (object):
 		self.date = datetime.date(year,mon,day)
 		code_st = 15
 		self.code = line[code_st:line.find(' ',code_st)]
-		v_st = line.find(' ',code_st)
-		while v_st == ' ':
+		v_st = 40
+		while line[v_st] == ' ':
 			v_st += 1
-		value_s = line[v_st:line.find(' ',v_st)]
-		self.value = value_s
+		v_end = line.find(' ',v_st)
+		value_s = line[v_st:v_end]
+		if v_end < 50:
+			self.value = float(value_s) * (-1)
+		else:
+			self.value = float(value_s)
 
 
-'''
-  31-Mar-2014  minrec3                      78.76                               Ministry Recharge - March - Archer 
-  31-Mar-2014  minrec3                       5.25                               Europe AG - March  - Archer 
-'''
+
 
 def find_cost_centre(pr):
 	cen_st = pr.find('Account Detail (') + len('Account Detail (')
@@ -191,4 +241,40 @@ def find_ending_balance(pr):
 		bal_st -= 1
 	bal_st += 1
 	return float(pr[bal_st:bal_end].replace(',',''))
-	
+
+if __name__ == '__main__':
+	if len(sys.argv) < 2:
+		'YOU BROKE IT! Actually you just didn\'t send me a report to process. try again.'
+	rep = Report(sys.argv[1])
+	jout = {}
+	jout['cost_centre'] = rep.cost_centre
+	jout['period_start'] = str(rep.period_start)
+	jout['period_finish'] = str(rep.period_finish)
+	jout['currency'] = rep.currency
+	jout['report_requester'] = rep.report_requester
+	jout['report_generated_date'] = str(rep.report_generated_date)
+	jout['total_credit'] = rep.total_credit
+	jout['total_debit'] = rep.total_debit
+	jout['net_balance'] = rep.net_balance
+	jout['starting_balance'] = rep.starting_balance
+	jout['ending_balance'] = rep.ending_balance
+	jout['centres'] = []
+	for centre in rep.centres:
+		cout = {}
+		cout['ID'] = centre.ID
+		cout['category'] = centre.category
+		cout['centre_total_debit'] = centre.centre_total_debit
+		cout['centre_total_credit'] = centre.centre_total_credit
+		cout['items'] = []
+		for item in centre.items:
+			iout = {}
+			iout['date'] = str(item.date)
+			iout['code'] = item.code
+			iout['value'] = item.value
+			cout['items'].append(iout)
+		jout['centres'].append(cout)
+	if len(sys.argv) == 3:
+		with open(sys.argv[2],'w') as outFile:
+			outFile.write(json.dumps(jout,sort_keys=True,indent=4,separators=(',',':')))
+	else:
+		print(json.dumps(jout,sort_keys=True,indent=4,separators=(',',':')))
