@@ -1,12 +1,12 @@
-import bibleIn
-import tldrnewsIn
+from inputs import bibleIn
+from inputs import tldrnewsIn
 
-import bibleProc
-import tldrnewsProc
+from processors import bibleProc
+from processors import tldrnewsProc
 
-import textOut
+from outputs import textOut
 
-kindle = "/media/toben/Kindle/documents/"
+#kindle = "/media/toben/Kindle/documents/"
 def run():
 	data = []
 	print("fectching bible")

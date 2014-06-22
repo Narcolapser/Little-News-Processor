@@ -1,0 +1,19 @@
+I asked Megan if she'd be interested in LNP. She said she might. That might give me encouragement to spur on development and get something actually usable. 
+
+I moved everything into the folders as planned. Then I tried to re-run my initial networks and got this:
+	ImportError: No module named 'bibleIn'
+"oh no!" i thought "what's wrong with the import? is this not going to work after all?" then I saw this in bibleProc.py:
+	import bibleIn
+that's not ok. the API's should not be aware that each other exist! But that did lead me to try this:
+	from ..inputs import bibleIn
+Which lead to:
+	ValueError: attempted relative import beyond top-level package
+Which lead to the obvious next idea of:
+	from inputs import bibleIn
+which worked. Now that is powerful. This path is relative to the program, so changing the top-level package location would change which python library that reads in. That has huge potential benefits.
+
+Anyway. What this has lead me to decide is I want to move everything up to being classes. This will allow the passing of them around to other parts of the network without having to be aware of what it is. so for example a processor accepts a list of other processors. it calls consume on each one in a for loop and does not care about what the proceeding processor actually is. As long as the processor that proceeds it is of the same standard that this processor is, all is well.
+
+This can also allow for some fancy trickery. I had previously just been putting everything into that one method. With a class I can have the init function actually do the fetching and the fetch method just returns a static chunk of data. or I can have it react depending on how many times it has been called or even update information before it returns it (say a time stamp.) Nifty.
+
+But it is getting a little late in the day for that now. I'm going to bed.
