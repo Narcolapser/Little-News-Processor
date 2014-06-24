@@ -1,4 +1,8 @@
 import os
 
-def put(data,location):
-	os.system("wkhtmltopdf "+location+".html "+location+".pdf")
+class:
+	def __init__(self):
+		pass
+
+	def put(self,data,location):
+		os.system("wkhtmltopdf "+location+".html "+location+".pdf")
