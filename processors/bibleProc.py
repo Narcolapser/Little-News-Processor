@@ -1,5 +1,3 @@
-from inputs import bibleIn
-
 class:
 	def __init__(self):
 		pass
@@ -16,7 +14,3 @@ class:
 				out += add
 			ret += out+"\n\n\n"
 		return ret[:-3]
-
-if __name__ == "__main__":
-	verses = bibleIn.fetch()
-	print(consume(verses))

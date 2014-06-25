@@ -1,0 +1,3 @@
+Updated the classes a little bit and removed no-longer legal imports. But this does really bring to mind how I need to start writing tests for these individual pieces. The nice thing is that they are so seperated out that it shouldn't be to hard. Each piece is required to operate in complete autonomy from the others assuming that they get passed valid inputs. I mean, I could essentially spin each pluggin up as an independent thread and it would work out of the box. Pretty slick really.
+
+Anyway. Further progress on classes is needed. I also need to write the petra input now that I've got a petra class to manage the reports. And Then write tests for each one. woohoo! on to bed.

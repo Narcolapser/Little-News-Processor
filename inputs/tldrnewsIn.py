@@ -2,7 +2,7 @@ import urllib.request
 
 class TLDRNewsInput(object):
 
-	def __init__(self,):
+	def __init__(self,tags):
 		if tags:
 			self.tags = tags
 		else:

@@ -1,5 +1,3 @@
-import bibleIn
-
 class:
 	def __init__(self):
 		pass
@@ -20,8 +18,3 @@ class:
 			out = out.replace("%text%",add)
 			ret += out+"<br/>"
 		return ret[:-3]
-
-if __name__ == "__main__":
-	verses = bibleIn.fetch()
-#	consume(verses)
-	print(consume(verses))
