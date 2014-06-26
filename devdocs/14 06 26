@@ -1,0 +1,7 @@
+I have the (gift in jars of clay...) pluggin for gedit I wrote to test modules as I write them. minor problem: it is broken. And the exact problem is being quite alusive. So, some night when I'm on Oxygen not Kodachi I'll need to dive into that and get it working a little better. I would like to use it for this so that I can have tests being run as I write.
+
+Though this does leave me open to some interesting options. I think what I'm going to do is make a master test script in the root. This test script then is responsible for running all the tests against the various pluggins. That would be nice and centeralized. 
+
+I'm going to have the main test script on the root of the directory. This may or may not be the be all end all of testing here. I may later figure out how to include testing as part of the pluggins so that they are entirely self contained, but I will at very leas start here until I'm comforable with tests. I could see two sides to that plan. On the one side: entirely self contained pluggin, makes it easy to drop in place. But does make the file itself more complicated. 
+
+I'm at a cross roads I need to consider. Should I have the ability to sort tests by tags or not. I'm falling asleep. time to call it quits.
