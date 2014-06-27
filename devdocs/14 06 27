@@ -1,0 +1,1 @@
+Got the regression tester basically finished. It needs some prettying up, but it finds tests and runs them regardless of directory in the program. I'm pleased. Let's push this up.
