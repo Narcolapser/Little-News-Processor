@@ -1,0 +1,14 @@
+I've run into inhierit problems with writing tests for the inputs. They will naturally change in many cases. Anything that pulls in info from the web for example will more than likely change from one day to the next. How am I going to test against that?
+
+I have two ideas:
+	Dummy class: Intercept all the requests being made by the pluggin so that I can create a dependable interface that always gives the same answers.
+	test only for types and not values: so for temperatures in the weather pluggin for example, it checks that it is a number and not a string, etc. 
+
+The advantage of the dummy class is that it would provide the ability to more comprehensively test the pluggin. The advantage of the types is that it would be simplier to implement.
+
+Thouch as it turns out, the input pluggins thust far have been so simple, that writing tests for them is almost laughable. I mean, look at this:
+
+		u = urllib.request.urlopen(forcast)
+		return json.loads(u.read().decode("utf-8"))
+
+How do I write a test that reasonable tests 2 lines? Not so much.
