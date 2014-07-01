@@ -1,0 +1,5 @@
+I'm running head long into theory problems again. What exactly do I want as the output for my processors? It is now a little bit more complicated. Mostly because I'm doing something that is to be tested.
+
+I've added a petra report with falsified information in it. This way I can have the petra report stored locally for testing purpose, but have no guilt over the fact that I'm posting financial information un-protected on the interwebs. 
+
+I really need to start looking into how to make pictures now. I've got "Make chart processor" as one of the things due for this next release. Uh. that means dealing with PIL again. I've not been entirely pleased with that library. Surely there is a way to use it simply, but I have not found that way yet. Maybe it's better in python3.
