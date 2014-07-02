@@ -100,12 +100,16 @@ class Centre(object):
 	items = None
 	
 	def __init__(self,centre):
-		#print(centre[:4])
+		#Cost Centre ID
 		self.ID = int(centre[:4].replace(' ',''))
+		
+		#Cost Centre Category
 		cat_st = 5
 		while centre[cat_st] == ' ':
 			cat_st += 1
 		self.category = centre[cat_st:centre.find(', ',cat_st)]
+		
+		#cost centre Items
 		lines = centre.split('\n')
 		self.items = []
 		sub_line = None
@@ -114,12 +118,15 @@ class Centre(object):
 				sub_line = line
 				break
 			self.items.append(Item(line))
+		
+		#cost centre total debit
 		sub_st = sub_line.find('Sub Total:') + len('Sub Total: ')
 		while sub_line[sub_st] == ' ':
 			sub_st += 1
 		sub_s = sub_line[sub_st:sub_line.find(' ',sub_st)].replace(',','')
 		self.centre_total_debit = float(sub_s)
 		
+		#cost centre total credit
 		sub_st += len(sub_s) + 1
 		while sub_line[sub_st] == ' ':
 			sub_st += 1

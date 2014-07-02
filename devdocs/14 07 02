@@ -1,0 +1,1 @@
+Writing tests for the inputs is hard. Because they are so focused on hiding things to make the API simple, it means it much harder to interject and control their input and thusly have consistent input and thus dependable. Thusly. Tests are hard.

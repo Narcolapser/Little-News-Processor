@@ -6,47 +6,47 @@ from inputs.petra import Report
 class TestReport (unittest.TestCase):
 
 	def setUp(self):
-		self.report = Report('/home/toben/Downloads/r0055639.txt')
+		self.report = Report('tests/petra_sample.txt')
 	
 	def test_cost_centre(self):
-		self.assertEqual(self.report.cost_centre,'3832ARCT')
+		self.assertEqual(self.report.cost_centre,'2345JOHS')
 	
 	def test_period_start(self):
-		self.assertEqual(self.report.period_start,datetime.date(2014,3,1))
+		self.assertEqual(self.report.period_start,datetime.date(2014,1,1))
 
 	def test_period_finish(self):
-		self.assertEqual(self.report.period_finish,datetime.date(2014,3,31))
+		self.assertEqual(self.report.period_finish,datetime.date(2014,2,28))
 		
 	def test_currency(self):
 		self.assertEqual(self.report.currency,'GBP')
 	
 	def test_requester(self):
-		self.assertEqual(self.report.report_requester,'JULIAP')
+		self.assertEqual(self.report.report_requester,'CALLIC')
 	
 	def test_gen_date(self):
-		self.assertEqual(self.report.report_generated_date,datetime.date(2014,4,22))
+		self.assertEqual(self.report.report_generated_date,datetime.date(2014,4,10))
 		
 	def test_total_debit(self):
-		self.assertEqual(self.report.total_debit, 814.53)
+		self.assertEqual(self.report.total_debit, 1770.48)
 	
 	def test_total_credit(self):
-		self.assertEqual(self.report.total_credit, 525.06)
+		self.assertEqual(self.report.total_credit, 1256.04)
 	
 	def test_net_balance(self): 
-		self.assertEqual(self.report.net_balance, 289.47)
+		self.assertEqual(self.report.net_balance, 514.44)
 	
 	def test_starting_balance(self): 
-		self.assertEqual(self.report.starting_balance, 4619.63)
+		self.assertEqual(self.report.starting_balance, 5134.07)
 	
 	def test_ending_balance(self): 
-		self.assertEqual(self.report.ending_balance, 4330.16)
+		self.assertEqual(self.report.ending_balance, 4619.63)
 	
 	def test_centre_count(self):
-		self.assertEqual(len(self.report.centres),17)
+		self.assertEqual(len(self.report.centres),16)
 
 class TestCentre(unittest.TestCase):
 	def setUp(self):
-		self.report = Report('/home/toben/Downloads/r0055639.txt')
+		self.report = Report('tests/petra_sample.txt')
 		self.minrec = None
 		for c in self.report.centres:
 			if c.ID == 5004:
@@ -70,7 +70,7 @@ class TestCentre(unittest.TestCase):
 
 class TestItem(unittest.TestCase):
 	def setUp(self):
-		self.report = Report('/home/toben/Downloads/r0055639.txt')
+		self.report = Report('tests/petra_sample.txt')
 		self.minrec = None
 		self.ich = None
 		for c in self.report.centres:
