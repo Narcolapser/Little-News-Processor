@@ -1,1 +1,5 @@
 Writing tests for the inputs is hard. Because they are so focused on hiding things to make the API simple, it means it much harder to interject and control their input and thusly have consistent input and thus dependable. Thusly. Tests are hard.
+
+So I thought for a litle along these lines "Maybe I could test parts of the input API. I'll have one part of the class responsible for getting the web page and then the rest of the class translates the web page into python objects!" then I realized that the first part of that pluggin would be the actual input pluggin and the second part is essentially a builtin processor. SO if the above was possible, it would be ridiculous.
+
+So I'm thinking now I'll drop testing the input APIs and start with the processors tomorrow.
