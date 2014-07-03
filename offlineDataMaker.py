@@ -1,14 +1,6 @@
-import bibleIn
-import tldrnewsIn
-import weatherIn
-
-import bibleProc
-import tldrnewsProc
-import weatherProc
-
-import textOut
-import htmlOut
-import pdfOut
+import inputs.bibleIn
+import inputs.tldrnewsIn
+import inputs.weatherIn
 
 import pickle
 
@@ -16,12 +8,15 @@ kindle = ""
 
 def run():
 	data = []
+	bib = inputs.bibleIn.BibleInput("inputs/bibleSchedule.csv")
+	tldr = inputs.tldrnewsIn.TLDRNewsInput()
+	wet = inputs.weatherIn.WUnderGroundInput()
 	print("fectching bible")
-	data.append(bibleIn.fetch())
+	data.append(bib.fetch())
 	print("done. Fetching news")
-	data.append(tldrnewsIn.fetch())
+	data.append(tldr.fetch())
 	print("done. Fetching weather")
-	data.append(weatherIn.fetch())
+	data.append(wet.fetch())
 	print("done. outputing")
 	f = open("fetches","w")
 	f.write("data = " + str(data))

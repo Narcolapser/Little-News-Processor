@@ -1,0 +1,19 @@
+I'm starting to have some better idea on what I want to do with things. I've previously had this basic model for the whole process with dealing with the bible as an news feed:
+
+Input: pulls in today's verses, spits them out as a list of tuples with (book,chapter,verse,text). 
+
+Processor: concatenates a list of bible verse tuples into a block of text
+
+Output: writes text to a file.
+
+What I need to do is abstract any concept of formating away from the processor, while keeping any thing that is unique to this particular feed away from the output. So rather than having the processor output to text chunk, lets do this instead:
+
+Processor: concatenates list of bible verses into a tuple containing (Header,text)
+
+output: writes a header set off, then writes out text
+
+This way the processors for bible, news, weather, what have you, need not pay any attention to how this is actually used. And this format could work for text or HTML or PDF outputs. Reusability!
+
+The result of this is a rework of my existing processors. BUT HEY, I expected that anyway. After the whole shift to classes thing.
+
+I spent my time actually reworking the inputs today. I got them back up and running as classes. Progress! woohoo! time for bed.

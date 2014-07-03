@@ -22,10 +22,11 @@ class WUnderGroundInput (object):
 		if city:	self.city = city
 		else:		self.city = 'Halesowen'
 
-	def fetch():
+	def fetch(self):
 		'''get the forecast for the location instantiated here.'''
 		u = urllib.request.urlopen(forcast)
 		return json.loads(u.read().decode("utf-8"))
 
 if __name__ == "__main__":
-	print(fetch())
+	wet = WUnderGroundInput()
+	print(wet.fetch())

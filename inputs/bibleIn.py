@@ -9,13 +9,17 @@ class BibleInput(object):
 	A class for pulling in bible information from a sqlite database and a csv that has been
 	provided.
 	'''
+	
+	schedule = None
+	
 	def __init__(self,schedule=None):
-		if schedule:
-			self.schedule = schedule
-		else:
+		if schedule is None:
 			schedule = "bibleSchedule.csv"
+		else:
+			self.schedule = schedule
+		print(self.schedule)
 
-	def getTodayWellFormated():
+	def getTodayWellFormated(self):
 		'''this function returns a well formated representation of today's date to make working
 		with the csv connection easy.
 		'''
@@ -32,7 +36,7 @@ class BibleInput(object):
 			today += str(ltime.tm_mday)
 		return today
 
-	def cleanRefs(val):
+	def cleanRefs(self,val):
 		'''val=bible verses to be cleaned. Takes a section of scripture and removes 'verse' and
 		'chapter' and 'book' so that it reads nicely.
 		'''
@@ -49,7 +53,7 @@ class BibleInput(object):
 			refs.append(ref)
 		return refs
 
-	def getTodaysReferences():
+	def getTodaysReferences(self):
 		'''takes today's date and the references made in the csv file to get what section of 
 		scripture out to be returned for today.
 		'''
@@ -65,7 +69,7 @@ class BibleInput(object):
 		refs = self.cleanRefs(rawRefs)
 		return refs
 
-	def getVersesFromDB(ref):
+	def getVersesFromDB(self,ref):
 		'''ref={book:'desired_book',chapter:#}->requested chapters if they exist.'''
 		db = sqlite3.connect('/home/toben/Code/Little-News-Processor/bible.db')
 		c = db.cursor()
@@ -78,7 +82,7 @@ class BibleInput(object):
 		ref = c.fetchall()
 		return ref
 
-	def fetch():
+	def fetch(self):
 		'''fetch method for the bible input pluggin.'''
 		verses = []
 		for r in self.getTodaysReferences():
