@@ -211,14 +211,14 @@ def find_total_credit(pr):
 	while pr[cred_st] == ' ':
 		cred_st += 1
 	cred_end = pr.find(' ',cred_st)
-	return float(pr[cred_st:cred_end])
+	return float(pr[cred_st:cred_end].replace(',',''))
 
 def find_total_debit(pr):
 	deb_st = pr.find('Grand Total') + len('Grand Total:')
 	while pr[deb_st] == ' ':
 		deb_st += 1
 	deb_end = pr.find(' ',deb_st)
-	return float(pr[deb_st:deb_end])
+	return float(pr[deb_st:deb_end].replace(',',''))
 
 def find_net_balance(pr):
 	net_st = pr.find('\nNet Balance:  ') + len('\nNet Balance:  ')

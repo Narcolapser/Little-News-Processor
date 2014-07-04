@@ -31,7 +31,15 @@ import importlib
 #	for mod in testPKGs:
 #		unittest.defaultTestLoader.loadTestsFromModule(mod)
 
-
+def prettyStringResults(val):
+	ret = ''
+	if val.wasSuccessful():
+		return 'All good.'
+	for e in val.errors:
+		ret += '\nThere was an error on: {0} Trace back is:\n'.format(str(e[0]))
+		ret += str(e[1])
+	
+	return ret
 
 def run():
 	'''
@@ -43,9 +51,12 @@ def run():
 	
 	tests = unittest.defaultTestLoader.discover('tests')
 	res = unittest.TestResult()
+	ret = ''
 	for t in tests:
-		print(t.run(res))
-	return res
+		t.run(res)
+		if res:
+			ret += prettyStringResults(res)
+	return ret
 
 if __name__ == "__main__":
 	print(run())
