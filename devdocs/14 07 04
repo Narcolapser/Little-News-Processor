@@ -1,0 +1,23 @@
+Reading in the book "Architecture of Open Source" I am inspired by many of the statements made by the guy who did sendmail. It reminds me a little of what I'm to be doing with this project. I need to not be quite so broad in my thinking and focus on little things. The implementation of tests is a good thing. I won't deny that. And probably condusive to what I want to do now. Keep my pluggins as small as possible. Lets take the bible input pluggin as my current example.
+
+bibleIn reads from a csv and a file called "bible.db", it then returns the appropriate verse for the day. The thing is, it technically should be a couple pieces that do this. one input that opens up a database, one input that reads in a csv, a processor that requests verses from the bible database, the processor that formats them. This is the notion. But I'm thrown back onto the concept of complexity that the selenium project mentioned that basically says complexity never disappears, it just moves from one developer to another. So What do I want to do here would be the good question.
+
+My object is to make a program that is simple enough to use that both my mother and my girl friend would be able to use it for their kindles with out me having to give any instruction. 
+
+So, the pluggins, the blocks of code, need to be where the complexity is at. But this still brings up some difficulty. The bible pluggin is a great example of this. There needs to be some way of dealing with configuring the pluggins. The bible pluggin needs to know where the bible database is (so you could have multiple versions for example) and what verses it is to retrieve. This is where I REALY trip up. I could have the bibleIn pull in the entire bible, then have a processor trim out what is needed. Or I could have the bible in simple prepare a database connection and have a processor combine database with verses requested. AH! epiphany!
+
+
+So I envisioned an interface. A graphical user interface. In this interface all of the inputs are refered to as wholistic entities. For example, bibleIn is simple "Bible" or "KJVBible" or "NIV-Bible" etc. Weather underground is simple "Weather" or "Wunderground". These are the input pluggins and they retain their purpose of dealing with external data. But here's the great trick, only required that the input pluggins retrieve the data and bring it in as first world python objects. I never said what those python objects had to /be/. Why not have them be the input pluggins themselves? Since I've taken to having everything as classes, I can just simply pass the bibleIn class to the reading schedule class. The reading schedule class also takes a csvIn class and a dateIn class and mashes them together. It uses the dateIn to find the correct date in the csv, using the data in the appropriate cell it then makes a request to the bibleIn class and gets it's verses. The important thing here is that these were all specific and not generalized. This reading schedule class would most likely only work for the bible. I could make a generalized reading schedule class, having it work by chapter for example, but that might not work for the bible. It could work for other things though.
+
+The elegant thing here is that the image to the end user will be clear and easy to understand. 
+
+I was thinking if I'm doing it this way, could I then avoid configuring the pluggins. the answer is no. the csv schedule input that i'm working on now needs to be pointed to a file. There is no two ways about it. I NEED configuration information.
+
+I just thought "Hey, maybe I could have a file reader and then have csv schedule work from a string" but then I though "USABILITY DORK!" I might have the ability to do that later. Why not have both pluggins? But I'm going to make the CSVSchedule simple.
+
+For a moment there i ran into "Oh great. now I'm going to call fetch on schedule. I need to pass an argument! But I don't want two way data flow. That gets complicated for the user. grumble" Then I remembered, this doesn't need to actually do that. It just is supposed to elevate the csv file into python objects. Fetch, so far as it is concerned, returns the whole csv as a list of lists.
+
+
+The whole point of this project revolves around one basic principle "Provide data in a useful format." Inputs pull external data into python objects. Processors translate between inputs, outputs, and other translators. But all of these are just tryingt o provide data in a useful format to the next piece in line. Nothing more.
+
+
