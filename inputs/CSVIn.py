@@ -30,41 +30,6 @@ class CSVSchedule (CSVIn):
 	that has been formated specificlly in the way of (year,month,day) addresses for lists or items
 	of information.
 	'''
-#	def __init__(self,location,cell_delimiter=',',row_delimiter='\n'):
-#		super().__init__()
-#		self.years = {}
-#		for row in self.data:
-#			if row[0] not in self.years.keys():
-#				self.years[row[0]] = {}
-#		
-#		for row in self.data:
-#			if row[1] not in self.years[row[0]].keys():
-#				self.years[row[0]][row[1]] = {}
-#		
-#		for row in self.data:
-#			if row[2] not in self.years[row[0]][row[1]].keys():
-#				if len(row[3:]) == 0:
-#					self.years[row[0]][row[1]][row[2]] = []
-#				elif len(row[3:]) == 1:
-#					self.years[row[0]][row[1]][row[2]] = [row[3]]
-#				else:
-#					self.years[row[0]][row[1]][row[2]] = [row[3:]]
-#			else:
-#					self.years[row[0]][row[1]][row[2]].append([])
-#				elif len(row[3:]) == 1:
-#					self.years[row[0]][row[1]][row[2]].append([row[3]])
-#				else:
-#					self.years[row[0]][row[1]][row[2]].append([row[3:]])
-		
-#		for row in self.data:
-#			if row[0] in self.dateData.keys():
-#				if row[1] in self.dateData[row[0]].keys():
-#					if row[2] in self.dateData[row[0]][row[1]].keys():
-#						if len(row[3:]) == 1:
-#							self.dateData[row[0]][row[1]][row[2]].append(row[3])
-#						else:
-#							self.dateData[row[0]][row[1]][row[2]].append(row[3:])
-					
 	
 	def getDate(self,year,month,day):
 		'''
@@ -86,3 +51,15 @@ class CSVSchedule (CSVIn):
 				days.append(row[1:])
 		
 		return days
+	
+	def getDateFromString(self,dateString):
+		'''
+		returns the list of items scheduled for the date given in the format of yyyy,mm,dd
+		'''
+		
+		items = []
+		for i in self.data:
+			if dateString == '{0:0>4},{1:0>2},{2:0>2}'.format(i[0],i[1],i[2])
+				items.append(i[3:])
+		
+		return items

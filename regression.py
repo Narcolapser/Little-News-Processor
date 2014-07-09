@@ -55,7 +55,7 @@ def run():
 	for t in tests:
 		t.run(res)
 		if res:
-			ret += prettyStringResults(res)
+			ret += 'Testing {0} with the results of:\n{1}\n'.format(t.id(),prettyStringResults(res))
 	return ret
 
 if __name__ == "__main__":
