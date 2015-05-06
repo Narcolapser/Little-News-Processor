@@ -1,4 +1,4 @@
-class:
+class TextOut:
 	def __init__(self,chapterSeperator=None):
 		if chapterSeperator:
 			self.CS = chapterSeperator

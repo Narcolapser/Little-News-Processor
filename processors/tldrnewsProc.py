@@ -1,4 +1,4 @@
-class:
+class TLDRNewsProc:
 	def __init__(self):
 		pass
 

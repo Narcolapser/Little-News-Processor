@@ -1,6 +1,6 @@
 import os
 
-class:
+class PDFout:
 	def __init__(self):
 		pass
 

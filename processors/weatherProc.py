@@ -1,4 +1,4 @@
-class:
+class WeatherProc:
 	def __init__(self):
 		pass
 

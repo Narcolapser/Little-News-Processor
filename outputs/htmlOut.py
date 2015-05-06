@@ -1,4 +1,4 @@
-class:
+class HTMLOut:
 	def __init__(self):
 		pass
 	

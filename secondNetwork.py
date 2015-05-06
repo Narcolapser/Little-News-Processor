@@ -1,25 +1,25 @@
-import bibleIn
-import tldrnewsIn
-import weatherIn
+from inputs.bibleIn import BibleInput
+from inputs.tldrnewsIn import TLDRNewsInput
+from inputs.weatherIn import WUnderGroundInput as WeatherIn
 
-import bibleProc
-import tldrnewsProc
-import weatherProc
+from processors.bibleProc import BibleProc
+from processors.tldrnewsProc import TLDRNewsProc
+from processors.weatherProc import WeatherProc
 
-import textOut
-import htmlOut
-import pdfOut
+from outputs import textOut
+from outputs import htmlOut
+from outputs import pdfOut
 
 kindle = ""
 
 def run():
 	data = []
 	print("fectching bible")
-	data.append(bibleProc.consume(bibleIn.fetch()))
+	data.append(BibleProc().consume(BibleInput().fetch()))
 	print("done. Fetching news")
-	data.append(tldrnewsProc.consume(tldrnewsIn.fetch()))
+	data.append(TLDRNewsProc().consume(TLDRNewsInput().fetch()))
 	print("done. Fetching weather")
-	data.append(weatherProc.consume(weatherIn.fetch()))
+	data.append(WeatherProc().consume(WeatherIn().fetch()))
 	print("done. outputing")
 	textOut.put(data,kindle+"dailyNews.txt")
 	htmlOut.put(data,kindle+"dailyNews.html")

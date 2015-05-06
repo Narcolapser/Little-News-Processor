@@ -1,4 +1,4 @@
-import urllib.request
+import requests
 
 class TLDRNewsInput(object):
 
@@ -49,7 +49,8 @@ class TLDRNewsInput(object):
 
 
 	def pulldownFeed(self,tag):
-		u = urllib.request.urlopen("http://toolong-didntread.com/tagged/"+tag)
+		#u = urllib.request.urlopen("http://toolong-didntread.com/tagged/"+tag)
+		u = requests.get("http://toolong-didntread.com/tagged/"+tag)
 		h = u.read()
 		s = str(h)
 		return s

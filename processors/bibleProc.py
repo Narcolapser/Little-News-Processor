@@ -1,4 +1,4 @@
-class:
+class BibleProc:
 	def __init__(self):
 		pass
 

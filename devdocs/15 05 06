@@ -1,0 +1,7 @@
+Man, I have way over thought this program. I tried to build something extensible and flexible and have just made something un-usuable. I regret that.
+
+If I'm going to get this system working again I'm going to probably have to re-factor a lot of it, probably back to older versions in truth. I had something that worked and I've broken it.
+
+I'm abandoning TDD. Most of these scripts are short enough that they really don't need it. So why bother? And I'm taking up the montra of "Whatever works." which was the main idea behind this project to begin with.
+
+So I'm going to step forward aiming for just getting something patched together that works. I need to not over think this. I need to put the priority on what makes it simple, not what makes it scalable or fast. 
