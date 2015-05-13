@@ -43,27 +43,6 @@ Version 0.3:
 
 Version 0.4:
 	fetch and consume personal finance information.
-	add chart processor
 	
 Version 0.5:
-	add gs.stat counter as an input.
-	add image support, use /r/Blackandwhiteporn for source material.
-	improve HTML out (and as a result improve pdf out)
-
-Version 0.6:
 	Begin simple GUI
-
-Version 0.7:
-	Add personal support data processing and display.
-	  process petra statements and such.
-	Add rss feeds.
-
-Version 0.8:
-	Improve gui presentation
-	add edditor for pluggins into the program.
-
-Version 0.9:
-	Bug hunt. Get this thing Robost for the dot O release.
-
-Version 1:
-	Party.

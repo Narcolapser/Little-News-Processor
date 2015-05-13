@@ -1,0 +1,106 @@
+gl2120p.p                  Account Detail (2345JOHS)                  10-Apr-2014 
+Page: 1                            FieldName                             19:02:04 
+Report requested by: CALLIC                                    Version: 2.2.20 
+ 
+Ledger 38     Lifehope                                Period: 01-Jan-2014 TO 28-Feb-2014 (14 To 15)      (FWD PERIOD)                
+Currency: GBP Ordered by: Cost Centre            Cost Centre: 2345JOHS To 2345JOHS                                                   
+Current Period is 13                                 Account: 0100 To 9800                                                           
+                                                                                                                                     
+CostCentre/Account                         Debits              Credits                          Start Balance          End Balance   
+------------------------------------------------------------------------------------------------------------------------------------ 
+ 
+2345JOHS-1100         Support Gifts: Foreign, Smith, John 
+  31-Jan-2014  ich1                                             320.43          Usa Jan Smith 
+  28-Feb-2014  ich2                                             575.61          Usa Feb Smith 
+                   Sub Total:                0.00             1,234.56                          9,876.54 CR           11,171.92 CR 
+                 Net Balance:                                 1,234.56      
+ 
+2345JOHS-4100         Ministry: General, Smith, John 
+                   Sub Total:                0.00                 0.00                             14.00 DR               14.00 DR 
+                 Net Balance:                                     0.00      
+ 
+2345JOHS-4221         Telephone, Smith, John 
+  21-Feb-2014  AP 2012                      15.00                               AP:2012 - Internet for John Smith - Oct -Dec - Theuns, John 
+                   Sub Total:               15.00                 0.00                             15.00 DR               30.00 DR 
+                 Net Balance:               15.00                           
+ 
+2345JOHS-4303         Allowance-Personal, Smith, John 
+  28-Jan-2014  AP 1800                     123.50                               AP:1800 - Smith allowance - Smith, Toben, Mr 
+  28-Feb-2014  Feb-14                      123.50                               AP:2074 - Smith ALLOWANCE - Smith, Toben, Mr 
+                   Sub Total:              246.00                 0.00                          1,234.00 DR            1,575.00 DR 
+                 Net Balance:              246.00                           
+ 
+2345JOHS-4330         Pension/Insurance, General, Smith, John 
+  31-Jan-2014  ich1                        100.00                               USA Jan Smith Cigna 
+  28-Feb-2014  ich2                        100.00                               USA Feb Smith Cigna 
+                   Sub Total:              200.00                 0.00                            400.00 DR              600.00 DR 
+                 Net Balance:              200.00                           
+ 
+2345JOHS-4341         Rent, Smith, John 
+  22-Jan-2014  AP 1833                     150.00                               AP:1833 - Rent - Bill Bridley Estate Agents - 14 Bob RD 
+  22-Jan-2014  AP 1792                      75.00                               AP:1792 - Rent - J 33a Cobweb Road 
+  20-Feb-2014  AP2158                      225.00                               AP:2158 - RENT 14 Bob ROAD - Bill Bridley Estate Agents - 14 Bob RD 
+                   Sub Total:              450.00                 0.00                            450.00 DR              875.00 DR 
+                 Net Balance:              450.00                           
+ 
+2345JOHS-4342         Gas, Smith, John 
+  27-Jan-2014  AP 1953                      17.40                               AP:1953 - electricity & gas, 33a Cobweb Road - E-ON (Gas and Electricity) 012931218570 - 33a Cobweb Road 
+                   Sub Total:               17.40                 0.00                             45.00 DR               62.40 DR 
+                 Net Balance:               17.40                           
+ 
+2345JOHS-4345         Water & Sewage, Smith, John 
+  20-Feb-2014  AP2244                       18.55                               AP:2244 - WATER 14 Bob ROAD - South Staffs Water UC12619000/01 - 14 Bob Road 
+                   Sub Total:               18.55                 0.00                             56.18 DR               74.73 DR 
+                 Net Balance:               18.55                           
+ 
+2345JOHS-4347         Local Tax, Smith, John 
+  23-Jan-2014  AP 1880                      21.25                               AP:1880 - council tax, John Acher, 33a Cobweb Road - DMBC 56867241 - 33a Cobweb Road 
+  28-Jan-2014  AP 1889                      22.34                               AP:1889 - council tax - DMBC 60256277 - 14 Bob Road 
+  21-Feb-2014  AP2183                       44.67                               AP:2183 - COUNCIL TAX 14 Bob ROAD - DMBC 60256277 - 14 Bob Road 
+                   Sub Total:               88.26                 0.00                            127.50 DR              215.76 DR 
+                 Net Balance:               88.26                           
+ 
+2345JOHS-4350         Team Living, Smith, John 
+  19-Feb-2014  AP 2043                      16.39                               AP:2043 - Bob Rd - Housing - Vacuum, cleaning/kitchen supplies - Mary, Sue, Herr 
+                   Sub Total:               16.39                 0.00                              0.00                  16.39 DR 
+                 Net Balance:               16.39                           
+ 
+2345JOHS-4352         Re-Entry Money, Smith, John 
+  31-Jan-2014  ich1                         15.70                               Usa Jan Smith re-entry 
+  28-Feb-2014  ich2                         15.82                               Usa Feb Smith re-entry 
+                   Sub Total:               31.52                 0.00                             64.92 DR               96.44 DR 
+                 Net Balance:               31.52                           
+ 
+2345JOHS-4410         Public Transport, Smith, John 
+                   Sub Total:                0.00                 0.00                             40.30 DR               40.30 DR 
+                 Net Balance:                                     0.00      
+ 
+2345JOHS-4900         Admin Grant Expense, Smith, John 
+  31-Jan-2014  ich1                         86.45                               Usa Jan Smith 
+  28-Feb-2014  ich2                         64.27                               Usa Feb Smith 
+                   Sub Total:              150.72                 0.00                            466.61 DR              617.33 DR 
+                 Net Balance:              150.72                           
+ 
+2345JOHS-5004         Internal Recharges, Smith, John 
+  31-Jan-2014  minrec1                     108.06                               Ministry Recharge - January  - Smith 
+  31-Jan-2014  minrec1                       7.20                               Europe AG - January  - Smith 
+  28-Feb-2014  minrec2                      80.34                               Ministry Recharge - February  - Smith 
+  28-Feb-2014  minrec2                       5.36                               Europe AG - February  - Smith 
+                   Sub Total:              200.96                 0.00                          1,586.53 DR            1,787.49 DR 
+                 Net Balance:              200.96                           
+ 
+2345JOHS-5100         Conference Expenses, Smith, John 
+                   Sub Total:                0.00                 0.00                            481.79 DR              481.79 DR 
+                 Net Balance:                                     0.00      
+ 
+2345JOHS-6802         Internal Reimb. Receivable, Smith, John 
+  28-Feb-2014  mileageFeb14                 22.50                               Petrol Charge X596KBM 
+                   Sub Total:               22.50                 0.00                              0.00                  22.50 DR 
+                 Net Balance:               22.50                           
+ 
+           Cost Centre Total:            1,770.48             1,256.04                          5,134.07 CR            4,619.63 CR 
+                 Net Balance:              514.44                           
+------------------------------------------------------------------------------------------------------------------------------------ 
+==================================================================================================================================== 
+Grand Total:                             1,770.48             1,256.04                          5,134.07 CR            4,619.63 CR 
+Net Balance:                               514.44                           

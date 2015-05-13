@@ -1,0 +1,105 @@
+
+
+--------------====================--------------
+
+world-news : Florida jail blast kills 2, injures dozens
+	Part of the Escambia County, Florida, jail collapsed after an apparent gas explosion, killing two inmates and injuring about 100 others.
+
+world-news : Gerry Adams arrested for questioning over 1972 IRA slaying
+	Police on Wednesday arrested Sinn Fein leader Gerry Adams for questioning in connection with the 1972 Irish Republican Army abduction and slaying of a widow.
+
+world-news : Ukraine crisis: OSCE observers held captive amid simmering tensions
+	Members of the Organization for Security and Co-operation in Europe were detained Friday as it entered the town of Slavyansk. The self-declared mayor of the town said that the captured OSCE observers are safe and well.
+
+world-news : North Korea says it has American in custody
+	North Korea says they have in custody an American man who wants asylum. The U.S. State Department says it is aware of North Korean report.
+
+world-news : Teen girl killed at Connecticut high school; male classmate arrested
+	A 16-year-old girl was cut in the neck, chest and face; a knife is found. The teen suspect faces murder charges; he could later be charged as an adult.
+
+world-news : NYPD's Twitter photo contest backfires with images of aggressive police force
+	Earlier today, the NYPD Twitter account asked to tweet photos of themselves with NYC police officers under the hashtag #myNYPD but so far, many users have jumped on that hashtag to flood it with images of police aggressively apprehending apparent suspects.
+
+world-news : 1 person dies as violent protests flare in Rio de Janeiro's Copacabana beach
+	One person died in Rio de Janeiro&rsquo;s clashes. Protesters burned barricades and police blocked streets as clashes flared in Rio de Janeiro&rsquo;s beachside neighborhood of Copacabana on Tuesday night.
+
+world-news : MH370 search: 'Object of interest' found on Western Australian coast
+	Australian officials say an &ldquo;object of interest&rdquo; in the search for the missing Malaysia Airlines plane has been found, but Malaysia authorities said it was too early to tell if it is a real lead.
+
+science : NASA's Kepler program discovers the most Earth-like planet yet
+	The newly-discovered Kepler 186f planet is nearly identical to our planet in some key ways. The planet is one of the closest in size to Earth that has been discovered, and it is also the right distance from its sun to be in the &ldquo;habitable zone&rdquo;.
+
+science : Asian air pollution could have impact on global weather patterns
+	A study finds that air pollution from Asia directly affects the storm pattern over the Pacific Ocean. Researchers further speculate that this could be driving freak winter weather in North America.
+
+science : 'Blood moon' will be a sight to behold during total lunar eclipse
+	This Tuesday, a total Moon eclipse will turn the Moon copper red. It&rsquo;s called a blood moon, and this one is just the first in a series of four consecutive total eclipses.
+
+science : Lab-grown vaginas have been successfully implanted in four women
+	Scientists announced today that four women received lab-grown vaginas between 2005 and 2008. According to their doctors, all of the patients are doing quite well.
+
+science : Scientists just took a major step toward making life from scratch
+	A team of scientists has announced  that they were able to construct a heavily modified yeast chromosome from scratch.
+
+science : Scientists fail to replicate groundbreaking stem cell technique, sparking investigation
+	When Japanese researchers announced they devised a way to force adult cells to become embryonic-style stem cells, the scientific world was abuzz. But now, one of the authors announced they failed to replicate the technique.
+
+science : Alzheimer's can be predicted three years in advance with new blood test
+	A new blood test can predict Alzheimer&rsquo;s three years in advance. This analyzes the concentration of 10 chemicals and is 93% accurate.
+
+science : Bad brains: some people are physically incapable of enjoying music
+	Most people feel something when they hear a song, but there are some that do not feel anything, neuroscientist Josep Marco-Paller&eacute;s from the University of Barcelona says.
+
+tech : Real talk: the new Snapchat makes texting fun again
+	The new Snapchat update lets you text inside Snapchat for the first time and once you leave a conversation, the messages disappear. More importantly, the new Snapchat lets you video call a friend at a moment&rsquo;s notice.
+
+tech : Xbox Originals to challenge Netflix in June
+	Microsoft has been teasing a number of original television projects for months, and with the first shows ready to premiere this June the company&rsquo;s Xbox Entertainment Studios has revealed its full slate of projects. Dubbed Xbox Originals, the content push will begin this June 13th with the previously-announced interactive live broadcast of the Bonnaroo music festival.
+
+tech : Twitter rolls out redesigned user profiles to everyone
+	After several weeks of testing its redesigned profiles, Twitter has today rolled out the new look to all users. You can enable it for your own account right now.
+
+tech : Apple's letting anyone help test its next OS X update
+	Apple is suddenly taking a much more open approach to testing its desktop operating system. For the first time in years, the company is inviting regular consumers to help test upcoming OS X software updates before they&rsquo;re distributed publicly.
+
+tech : NASA sending Google's Project Tango smartphone to space to improve flying robots
+	An experimental NASA robot could get a big upgrade thanks to Google. The two parties have been working together to integrate Google&rsquo;s Project Tango smartphone prototype onto NASA&rsquo;s SPHERES.
+
+tech : AT&amp;T adds more data and tethering to top prepaid plan
+	AT&amp;T is making its off-contract GoPhone plans a little more competitive as T-Mobile continues its aggressive tactics to win over customers in that market.
+
+tech : 3D-printed cast concept uses ultrasound to heal broken bones
+	Victoria University of Wellington graduate Jake Evill created the Cortex cast, a concept to replace traditional plaster casts while offering the added benefits of being lightweight and odor-free. Now, the Osteoid cast, takes things a step further by adding an ultrasound device meant to speed up the healing process.
+
+tech : Nokia suspends Lumia 2520 tablet sales due to electric shock risk
+	Nokia has suspended sales of its Lumia 2520 tablet in the UK, Austria, Denmark, Finland, Germany, Russia, and Switzerland after discovering a fault with its charger. Around 30,000 users are affected.
+
+gaming : Angry Birds makers see profits halved in 2013
+	Angry Birds developer Rovio saw profits fall by roughly half during 2013, according to its latest fiscal results&nbsp;released today.The company, which saw a growth in staff in the previous year&nbsp;&mdash; a rise from 500 to 800 employees&nbsp;&mdash; experienced a drop in net profits to $37.3 million.
+
+gaming : PS4 update 1.70 coming soon, introduces video editor app, USB saves, game pre-loading
+	Sony announced today that the 1.70 PS4 update is coming soon, introducing video editor app ShareFactory, USB drive saves and software pre-loading on PlayStation 4 systems.
+
+gaming : Report: Ouya Ditching Console to Focus on Software
+	Ouya company executives told The Verge that the Android-powered, living-room gaming hardware is no longer going to be a hardware device. The company will focus on building Ouya as a software platform that could run on third-party devices like set-top boxes, televisions and other Android-based gaming consoles. 
+
+gaming : Watch Dogs hits May 27, here's how the versions will compare
+	Ubisoft announced earlier this week that all versions of Watch Dogs (for PC, PS3, PS4, Xbox 360 and Xbox One), except the one coming to Wii U, will arrive on May 27. The game&rsquo;s senior producer said that the graphics, dynamism and detail of the city and gameplay will be scaled on devices, for example on last-generation platforms.
+
+gaming : The Last of Us live-action movie in development
+	Naughty Dog&rsquo;s PlayStation 3 game The Last of Us is being adapted into a live-action movie to be distributed by a Sony Pictures subsidiary, Deadline reports. The game&rsquo;s creative director is attached to the write the film&rsquo;s script. He recently won the Writers Guild of America&rsquo;s Outstanding Achievement in Writing for Video Games award.
+
+gaming : Twitch streaming is coming to mobile games
+	Twitch announced the release of the Twitch mobile software development kit yesterday, which will allow developers to add livestreaming and screen capture functionality to mobile games. The SDK will allow broadcasting of gameplay audio and video, as well as video from mobile devices&rsquo; front camera and audio through internal or external microphones. A release date has not been confirmed.
+
+gaming : Report: Leaked Titanfall images reveal maps, modes and more
+	According to a leak of screenshots and information posted on the Titanfall subreddit, the game will feature 15 maps, some of which contain ziplines and fixed heavy turrets that can be hacked to fight for either team, and will have &ldquo;Generations&rdquo;, which function similarly to Call of Duty&rsquo;s Prestige mode.
+
+gaming : Fez hits PS3, PS4 and Vita March 25
+	Fez will be released on March 25 for PlayStation 3, PlayStation 4 and PlayStation Vita, with cross saves supported across all three systems. The game will run at 720p at 60fps on PS3; &ldquo;the best-looking and smoothest Fez experience you can get on a TV set&rdquo; - 1080p at 60fps on PS4; and native 960 x 544 on the PS Vita.
+
+
+
+
+--------------====================--------------
+

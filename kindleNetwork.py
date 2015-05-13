@@ -9,7 +9,6 @@ import weatherProc
 import textOut
 
 kindle = "/media/toben/Kindle/documents/"
-
 def run():
 	data = []
 	print("fectching bible")

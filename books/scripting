@@ -1,0 +1,23 @@
+for book in books[7:8]:
+	text = open(saveLoc+book,"r").read()
+	cnb = len(book)+2
+	cne = text.find("This noteless version")-1
+	chapNums = text[cnb:cne].split(" ")
+	chapStarts = []
+	for chap in chapNums:
+		chapStarts.append(text.find(book+"\nChapter " + chap))
+	chapters = []
+	for i,chap in enumerate(chapStarts):
+		if i + 1 < len(chapStarts):
+			chapters.append(text[chap:chapStarts[i+1]])
+		else:
+			chapters.append(text[chap:])
+
+	for i,chapter in enumerate(chapters):
+		vc = chapter.count(str(i+1)+":")
+		prev = 0
+		verses = []
+		for verse in range(vc):
+			v =(chapter[prev:chapter.find(str(i+1)+":"+str(verse+2))])
+			prev = chapter.find(str(i+1)+":"+str(verse+2))
+			c.execute("INSERT INTO verse VALUES(?,?,?,?)",(unicode(book),i+1,verse+1,unicode(v)))
