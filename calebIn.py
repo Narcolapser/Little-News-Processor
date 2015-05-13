@@ -7,7 +7,6 @@ import csv
 def clean_results(val):
 	reader = csv.reader(val.split('\r\n')[:-1])
 	headers = reader.__next__()
-	print(headers)
 	ret = []
 	
 	for row in reader:
@@ -21,7 +20,6 @@ def clean_results(val):
 def fetch():
 	auth = json.loads(open('caleb.passwd','r').read())
 	auth = (auth['username'],auth['password'])
-	print(auth)
 
 	url = 'https://secure.om.org/caleb/support/csvsupport.jsp'
 	params = {'report':'all_don','period':'all_available','currency':'USD','startDate':'01-Jan-2013','endDate':'01-Jan-2020'}
