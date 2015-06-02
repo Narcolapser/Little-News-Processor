@@ -8,4 +8,5 @@ def fetch():
 	return json.loads(u.read().decode("utf-8"))
 
 if __name__ == "__main__":
-	print(fetch())
+	for i in fetch()['forecast']['simpleforecast']['forecastday']: print(i,'\n\n')
+	#print(fetch())
