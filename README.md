@@ -1,48 +1,10 @@
 Little-News-Processor
 =====================
 
-Little News Processor (LNP) is a system for reformatting multiple difference news feeds into a single format for outputting into various locations. This idea was concieved by a desire for peices of news that are pertinent to me being automatically desposited on my kindle every morning. 
+Little News Processor (LNP) is a system for reformatting multiple difference news feeds into a single format for outputting into various locations. In it's function, it bears a closer resemblance to a web scrapper than a feed reader.
 
-Why not use an existing solution?
-
-I looked into existing open source solutions avaliable. They all dealt with gathering in rss feeds of some nature or another and presenting them to you in a form for you to read or sync to a device (maybe). But the problem is that this is far to unflexible of a news source for me. Some of my news doesn't come in the form of rss feeds. A lot of the news I want is actually personal information. So I need to make my own solution that handles many more input options and can also tend to many output options.
-
-The different sources is one thing, but the other real major break in mentallity of LNP in contast to most other news programs is that LNP processess data. It can just simply pull down the rss feeds and out put them if you want, OR you could have it process the information. For example. You wanted to monitor the trend of the word "Cloud" in a 10-50 gaming news feeds. you could read them yourself and get a biased opinion on how much people are talking about it, or you could have LNP parse all of the posts and find the objective number of times that "cloud" appears in the weblogs.
-
-So different kind of sources. What kind of sources are you thinking?
-	RSS (your normal news feeds)
-	HTML (read from sites that don't support news feeds natively, like bank account information, weather, etc)
-	CSV/XSLX (Data, gonna come back to what I mean)
-	SQL (Data!)
-	TXT/XML (Data?)
-
-What else can you do with processing?
-So, The bible is huge. I want to set up a reading schedule for myself and have the passages I want pulled from a SQL database and put into the out put of my personal news feed. This means that there is a static body of information that is picked through on a schedule rather than just all dumped in at once. This is true for txt and csv as well. You can have it give you parts of an input at a time based off of how the plug in is programmed.
-
-What's more, say I keep close tabs on my bank acounts. Every day I log in and check the transactions, download the csv, add it to my spread sheet and plug in transaction purposes and types etc. LNP will read in that spread sheet and make informatics. say like a pie chart of how much I have spent this month and how much of my income I have left. Or a table of my expendatures and how they have varied from last month.
-
-This sounds complex. How are you going to pull it off?
-xIn : a script designed to fetch data from an outside source. Given no arguments.
-xProc : a script designed to process internal data. Give the data as only argument.
-xOut : a script designed to take data and put it some where external. Given data and location as arguments.
-xNetwork : a script that describes an arrangement of the scripts above. 
-In these cases replace "x" with the desired name.
-
-Road map:
-Version 0.1:
-	Read in bible verses
-	read in news from toolong-didntread.com.
-
-Version 0.2:
-	process both bible and tldr-n inputs
-	output to txt
-
-Version 0.3:
-	fetch and consume weather forcasts.
-	output to pdf
-
-Version 0.4:
-	fetch and consume personal finance information.
+	LNP is designed with 3 conceptual areas. Inputs, Processors, and Outputs. an Input *requires* no arguments and has a "fetch" method in it's script file. The idea is that it's focus is on getting data into the system. As much data as it can formated as python objects easy to work with. Processors have a "consume" method that does work on information you pass to it from another Processor or an input. And an Output has no return but rather pushes information outside, to a txt file, pdf, web, kindle, etc. The only thing that keeps these seperate is psychological. Any one of them could do any of these tasks, but by giving them the title of input, processor, or output, people intuatively understand the purpose of the module. 
 	
-Version 0.5:
-	Begin simple GUI
+	Imagine you wanted to keep track of your finances closely. You wanted a daily update on your cash flow with charts and predictions and statistics. That would be easy with LNP. Take an input that pulls information from your bank. Take an input that pulls information from any other financial records you may have (I keep a google doc with all my reciepts for example). Plug those into a processors that create charts, graphs, and statistics. Then you can have an entire report sent to your tablet and a summary report sent to your phone through two different outputs. Or the same output that has been fed different data. 
+	
+	LNP is still very much so in alpha. There is currently not even a GUI, so it is inaccessible to non-programmers. But as the project develops I hope to see a community who greates pluggins for it to help data flow from the internet to their mind.
